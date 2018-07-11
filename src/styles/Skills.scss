@@ -1,0 +1,26 @@
+.skills-container {
+  grid-row-gap: 0.5em;
+  grid-template-columns: auto;
+  grid-template-rows: 1fr 3fr;
+  .skills-set {
+    display: grid;
+    font-size: 2.5rem;
+    animation: left-right 2s linear;
+    @media (min-width: 901px) {
+      grid-template-columns: repeat(7, 1fr);
+      grid-template-rows: auto;
+      grid-row-gap: 1em;
+    }
+    @media (max-width: 900px) {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 1fr 1fr 1fr;  
+      
+    }
+  }
+}
+
+@keyframes left-right {
+  0% { margin-left: -200px  }
+  50% { margin-left: -100px  }
+  100% { margin-left: 0px  }
+}

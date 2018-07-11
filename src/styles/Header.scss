@@ -1,0 +1,37 @@
+
+@mixin action($background-color) {
+  border-radius: 20%;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  background-color: $background-color;
+  &:hover {
+    box-shadow: 2px 5px 5px 1px rgba(0,0,0,0.24);
+  }
+}
+
+.menu {
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-right: 40px;
+  .nav-link {
+    margin: 10px;
+    padding: 5px 5px 5px 5px;
+    color: black;
+    &:visited {
+      color: black;
+    }
+    &.is-login {
+      @include action(#154484);
+    }
+    &.is-signup {
+      @include action(#27d31e);
+    }
+    &.is-logout {
+      @include action(#bb0e0e);
+    }
+  }
+}

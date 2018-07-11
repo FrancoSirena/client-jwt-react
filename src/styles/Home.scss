@@ -1,0 +1,28 @@
+.footer {
+  position: absolute;
+  cursor: pointer;
+  &:hover {
+    font-weight: bolder;
+  }
+  bottom: 1px;
+  right: 1px;
+}
+
+.overlay {
+  z-index: 3;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.about-me {
+  z-index: 10;
+  transform: translate(0%, 10%);
+  background-color: white;
+  .about-close {
+    cursor: pointer;
+  }
+}
